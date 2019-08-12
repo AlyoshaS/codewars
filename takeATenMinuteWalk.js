@@ -10,21 +10,22 @@ Note: you will always receive a valid array containing a random assortment of di
 It will never give you an empty array (that's not a walk, that's standing still!).
 */
 
-function isValidWalk(walk) {
+const isValidWalk = (walk) => {
   if (walk.length === 10) {
-    let north = walk.filter((value) => {
+    // um só filter pra todos? 
+    const north = walk.filter((value) => {
       if ('n' === value) { return value }
     })
 
-    let south = walk.filter((value) => {
+    const south = walk.filter((value) => {
       if ('s' === value) { return value }
     })
     
-    let east = walk.filter((value) => {
+    const east = walk.filter((value) => {
       if ('e' === value) { return value }
     })
 
-    let west = walk.filter((value) => {
+    const west = walk.filter((value) => {
       if ('w' === value) { return value }
     })
 
